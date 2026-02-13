@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>Arcade Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+
+    <header>
+        <h1>👾 Arcade Hub</h1>
+        <p id="status-indicator">Online</p>
+    </header>
+
+    <main id="game-menu">
+        <div class="game-card" onclick="loadGame('clicker')">
+            <div class="icon">👆</div>
+            <h3>Super Clicker</h3>
+            <p>Toca rápido</p>
+        </div>
+
+        <div class="game-card" onclick="loadGame('guess')">
+            <div class="icon">🔢</div>
+            <h3>Adivina #</h3>
+            <p>Lógica pura</p>
+        </div>
+
+        <div class="game-card" onclick="alert('Próximamente')">
+            <div class="icon">🚧</div>
+            <h3>En Obras</h3>
+            <p>Coming Soon</p>
+        </div>
+    </main>
+
+    <section id="game-container" class="hidden">
+        <button id="back-btn" onclick="closeGame()">⬅ Volver al Menú</button>
+        <div id="game-area"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
