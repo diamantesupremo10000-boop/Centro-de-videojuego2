@@ -1,0 +1,89 @@
+:root {
+    --bg-color: #1a1a2e;
+    --card-bg: #16213e;
+    --accent: #e94560;
+    --text: #ffffff;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    user-select: none; /* Sensación de App nativa */
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: #0f3460;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+h1 { margin: 0; font-size: 1.5rem; }
+
+#game-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.game-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.game-card:active { transform: scale(0.95); }
+
+.icon { font-size: 3rem; margin-bottom: 10px; }
+
+/* Contenedor del juego activo */
+.hidden { display: none !important; }
+
+#game-container {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+#back-btn {
+    padding: 15px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#game-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilos para los mini-juegos */
+.game-btn {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    background: var(--accent);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    margin-top: 20px;
+}
